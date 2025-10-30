@@ -1,6 +1,14 @@
 # Dettagli implementativi per l’Avviso PA digitale 2026 per Regioni e Province Autonome
 ## MISURA 1.3.1 PNRR “PIATTAFORMA DIGITALE NAZIONALE DATI” - IT WALLET
 
+
+## Indice dei contenuti
+- [Intro](#intro)
+- [Dettagli sulle API](#dettagli-sulle-api)
+- [Extra](#extra)
+
+## Intro 
+
 Questo repository contiene i dettagli implementativi delle API relative all’Avviso PA digitale 2026 per Regioni e Province Autonome MISURA 1.3.1 PNRR “PIATTAFORMA DIGITALE NAZIONALE DATI” - IT WALLET.
 
 L’obiettivo dell’avviso è l’erogazione di API nel Catalogo API PDND da parte delle Regioni. Tali API saranno funzionali alla successiva creazione di Attestati Elettronici di Attributi nell’IT-Wallet.
@@ -9,3 +17,27 @@ Pertanto, le API devono essere conformi alle Specifiche Tecniche del Sistema IT-
 
 In particolare, le sezioni da attenzionare sono la **10.4 Fonti Autentiche** e la **20.2. e-Service PDND**. 
 Quest’ultima definisce i requisiti tecnici ai quali le API da esporre devono essere conformi.
+
+
+## Dettagli sulle API
+- [API raccomandate](url)
+  - statistica
+  - badge
+- [API d'interesse](url)
+  - Codice Celiachia
+  - Tesserini
+    - Tesserino venatorio
+    - Tesserino pesca in acque salmonicole
+    - Tesserino raccolta funghi
+    - Tesserino raccolta tartufi
+  - Animali domestici
+    - Iscrizione anagrafe animali domestici
+    - Passaporto Europeo animali domestici
+  - Attestati Qualifiche professionali
+    - Attestati istruzione e formazione professionalizzante (IePF)
+    - Attestati formazione professionale continua (UC)
+    - Attestati abilitazione professioni regolamentate
+
+
+# Extra
+- [Autenticazione remota](url)
