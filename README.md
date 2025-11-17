@@ -1,11 +1,447 @@
-# Dettagli implementativi per l’Avviso PA digitale 2026 per Regioni e Province Autonome
-## MISURA 1.3.1 PNRR “PIATTAFORMA DIGITALE NAZIONALE DATI” - IT WALLET
+# **Dettagli implementativi per l’Avviso PA digitale 2026 per Regioni e Province Autonome**
 
-Questo repository contiene i dettagli implementativi delle API relative all’Avviso PA digitale 2026 per Regioni e Province Autonome MISURA 1.3.1 PNRR “PIATTAFORMA DIGITALE NAZIONALE DATI” - IT WALLET.
+## **MISURA 1.3.1 PNRR “PIATTAFORMA DIGITALE NAZIONALE DATI” - IT WALLET**
 
-L’obiettivo dell’avviso è l’erogazione di API nel Catalogo API PDND da parte delle Regioni. Tali API saranno funzionali alla successiva creazione di Attestati Elettronici di Attributi nell’IT-Wallet.
+## **Indice dei contenuti**
 
-Pertanto, le API devono essere conformi alle Specifiche Tecniche del Sistema IT-Wallet disponibili in modalità aperta e collaborativa al link https://github.com/italia/eid-wallet-it-docs nella versione 1.2 disponibile al link https://italia.github.io/eid-wallet-it-docs/releases/1.2.1/it/. 
+- Introduzione e contesto
 
-In particolare, le sezioni da attenzionare sono la **10.4 Fonti Autentiche** e la **20.2. e-Service PDND**. 
-Quest’ultima definisce i requisiti tecnici ai quali le API da esporre devono essere conformi.
+- Scopo e ambito di applicazione
+
+- Requisiti tecnici e di conformità
+
+- API raccomandate – Specifiche operative
+
+- Cluster di API di interesse (non esaustivi) – Modelli e requisiti
+
+- Domande frequenti – Chiarimenti tecnici
+
+- Proposte di attributi e raccomandazioni di ammissibilità
+
+## **Introduzione e contesto**
+
+Il presente repository fornisce indicazioni e raccomandazioni tecniche
+relative alla partecipazione all’[Avviso pubblico PNRR 1.3.1 – PDND / IT
+Wallet](https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a01bU00000NTeWKQA1). 
+
+Le disposizioni qui riportate costituiscono un quadro interpretativo
+condiviso volto a garantire uniformità e coerenza nell’attuazione di
+quanto previsto dall’avviso.
+
+L’obiettivo dell’avviso è l’esposizione di API su PDND volte alla
+creazione di **Attestati Elettronici di Attributi (EAA)**, fruibili
+attraverso l’**IT-Wallet del cittadino** (ad eccezione dell’API
+statistica).
+
+Le API pubblicate da Regioni e Province Autonome costituiranno i dati
+ufficiali utilizzati dal **Credential Issuer** per l’emissione degli
+Attestati Elettronici di Attributi
+
+## **Scopo e ambito di applicazione**
+
+Il contenuto del repository ha lo scopo di:
+
+- fornire una cornice tecnica e metodologica per la progettazione e
+  pubblicazione di API destinate all’IT-Wallet;
+
+- individuare le API raccomandate e altri possibili ambiti di interesse;
+
+- proporre dei modelli dati per le API raccomandate ai fini della
+  pubblicazione nel Catalogo PDND.
+
+**Il repository è inteso come strumento di condivisione e aperto alla
+collaborazione tra tutti gli Enti coinvolti.**
+
+## **Requisiti tecnici e di conformità**
+
+### Requisiti di conformità
+
+Le API dovranno seguire le informazioni presenti nel [Manuale Operativo
+di
+PDND](https://developer.pagopa.it/pdnd-interoperabilita/guides/pdnd-manuale-operativo)
+(con particolare riferimento alla sezione “e-service”) ed essere
+conformi alle **Specifiche Tecniche del Sistema IT-Wallet**, disponibili
+presso il [repository
+ufficiale](https://italia.github.io/eid-wallet-it-docs/versione-corrente/it/),
+le cui sezioni di maggiore interesse sono:
+
+- [**10.4 Fonti
+  Autentiche**](https://italia.github.io/eid-wallet-it-docs/versione-corrente/it/authentic-sources.html)
+
+- [**20.2. e-service
+  PDND**](https://italia.github.io/eid-wallet-it-docs/versione-corrente/it/e-service-pdnd.html)
+
+### **Requisiti tecnici**
+
+1.  **Identificativo univoco** – Il Codice Fiscale (CF) rappresenta
+    l’identificativo univoco da utilizzare per le chiamate alle API (ad
+    eccezione dell’API statistica)
+
+2.  **Risposta sincrona** – Le API devono rispondere in modalità
+    sincrona
+
+3.  **Pubblicazione nel Catalogo PDND** – Ogni API dovrà esporre un set
+    di dati completo nel contenuto e negli attributi. È ammessa la
+    pubblicazione di basi dati parziali relative a **periodi temporali
+    limitati.**
+
+### Titolarità dei dati 
+
+Ai fini del presente Avviso, come definito nell'Allegato 2, la Regione/Provincia Autonoma può operare
+quale erogatore dell’e-service su PDND:
+
+- **in qualità di Titolare di Fonte Autentica;**
+
+- **a supporto del Titolare di Fonte autentica**, nei limiti dell’ambito
+  regionale di competenza, ai fini dell’esposizione degli e-service
+  necessari alla creazione, verifica, stato e revoca/sospensione degli
+  attestati elettronici di attributi. I rapporti giuridici e
+  organizzativi tra la Fonte Autentica e la Regione/Provincia Autonoma,
+  inclusi quelli sul trattamento dei dati personali, sono disciplinati
+  da specifici accordi o atti che la Regione/Provincia Autonoma deve
+  tenere agli atti per la produzione al Dipartimento per la
+  Trasformazione digitale. Tali accordi o atti devono includere le
+  previsioni necessarie ad assicurare la disponibilità di tutto quanto
+  richiesto per eseguire sul progetto verifiche tecniche, controlli
+  formali e sostanziali da parte del DTD e audit e indagini da parte
+  delle Autorità nazionali ed europee competenti, compresa, ove
+  richiesto, l’esecuzione di attività ispettive presso le Fonti
+  Autentiche, legate alla verifica del corretto funzionamento dei
+  progetti finanziati a valere sul presente Avviso. Si ricorda infatti
+  che la Regione/Provincia Autonoma è il Soggetto Attuatore responsabile
+  nei confronti del Dipartimento per la trasformazione digitale della
+  corretta attuazione dell’intero progetto finanziato e degli obblighi
+  derivanti dal finanziamento con fondi PNRR in relazione alla Misura
+  1.3.1.
+
+## **API raccomandate – Specifiche operative**
+
+### **A. API Statistica Autenticazioni IT-Wallet**
+
+**Obiettivo:** rendere possibile il monitoraggio anonimo del numero di
+autenticazioni avvenute sulle piattaforme delle Regioni e delle Province
+Autonome tramite IT-Wallet.
+
+**Requisiti:** Il contatore incrementale registra:
+
+- Numero di richieste di autenticazione completate con successo
+  (obbligatorio)
+
+- Numero di richieste di autenticazione rigettate (non valide: errori di
+  firma, non riconoscibilità dell’issuer, errori di data format, errori
+  nei parametri delle richieste e delle risposte, ecc). (opzionale)
+
+- Numero totale di richieste di autenticazione pervenute (opzionale)
+
+I numeri delle richieste potranno essere totali dalla data di rilascio
+e\o parziali per anno e mese.
+
+Per maggiori dettagli sull’implementazione dell’autenticazione, si
+rimanda alle sezioni delle Specifiche Tecniche ["Flusso
+remoto"](https://italia.github.io/eid-wallet-it-docs/versione-corrente/it/remote-flow.html)
+e
+“[Autenticazione](https://italia.github.io/eid-wallet-it-docs/versione-corrente/it/functionalities.html#authentication)”.
+
+**Esempio endpoint API statistica:**  
+GET /api/v1/it-wallet/auth-stats?year=2025&month=10
+
+**Esempio risposta (200):**
+
+{  
+"fromDate": "2024-06-01",  
+"toDate": "2025-10-31",  
+"totalRequests": 12345,  
+"failedRequests": 234,  
+"successfulRequests": 12011,  
+"byMonth": \[  
+{"year": 2025, "month": 10, "total": 1234, "failed": 20, "success":
+1214}  
+\]  
+}
+
+### **B. API Badge Impiegato Regionale**
+
+**Obiettivo:** mettere a disposizione i dati necessari al Credential
+Issuer per generare Attestati Elettronici relativi al personale
+regionale.
+
+**Schema dati proposto:**
+
+| **Parametro** | **Descrizione** | **Standard** | **Obbligatorio** |
+|----|----|----|----|
+| legalName | Stringa. Nome dell’Organizzazione. | [Organization - Schema.org Type](https://schema.org/Organization) | No |
+| legalAddress | Stringa. Indirizzo postale dell’organizzazione. | [Organization - Schema.org Type](https://schema.org/Organization) | No |
+| location | Stringa. Località o area geografica. | [Organization - Schema.org Type](https://schema.org/Organization) | No |
+| logo | Stringa. URL del logo. | [Organization - Schema.org Type](https://schema.org/Organization) | No |
+| vatID | Stringa. Partita IVA. | [Organization - Schema.org Type](https://schema.org/Organization) | No |
+| telephone | Stringa. Numero di telefono dell’Organizzazione. | [Organization - Schema.org Type](https://schema.org/Organization) | No |
+| identifier | Stringa. Identificativo univoco. | [Thing - Schema.org Type](https://schema.org/Thing) | No |
+| validFrom | Stringa. Data di inizio validità. | [validFrom - Schema.org Property](https://schema.org/validFrom) | No |
+| validThrough | Stringa. Data di fine validità. | [validThrough - Schema.org Property](https://schema.org/validThrough) | No |
+| member | Oggetto JSON che contiene i claim del singolo individuo (PII) elencati nella tabella sottostante. | [Organization - Schema.org Type](https://schema.org/Organization) | No |
+| employee | Oggetto JSON che contiene i claim del singolo individuo (PII) elencati nella tabella sottostante. | [Organization - Schema.org Type](https://schema.org/Organization) | No |
+
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 32%" />
+<col style="width: 34%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="4" style="text-align: center;"><strong>PII
+Claim</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>givenName</td>
+<td>Stringa. Nome.</td>
+<td><a href="https://schema.org/Person">Person - Schema.org
+Type</a></td>
+<td>No</td>
+</tr>
+<tr>
+<td>familyName</td>
+<td>Stringa. Cognome.</td>
+<td><a href="https://schema.org/Person">Person - Schema.org
+Type</a></td>
+<td>No</td>
+</tr>
+<tr>
+<td style="text-align: left;">birthDate</td>
+<td>Data di nascita.</td>
+<td><a href="https://schema.org/Person">Person - Schema.org
+Type</a></td>
+<td>No</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Stringa. Indirizzo postale.</td>
+<td><a href="https://schema.org/Person">Person - Schema.org
+Type</a></td>
+<td>No</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Stringa. Indirizzo email.</td>
+<td><a href="https://schema.org/Person">Person - Schema.org
+Type</a></td>
+<td>No</td>
+</tr>
+<tr>
+<td>honorificPrefix</td>
+<td>Stringa. Es: Dott./Sig./Sig.ra</td>
+<td><a href="https://schema.org/Person">Person - Schema.org
+Type</a></td>
+<td>No</td>
+</tr>
+<tr>
+<td>jobTitle</td>
+<td>Stringa. Qualifica professionale.</td>
+<td><a href="https://schema.org/Person">Person - Schema.org
+Type</a></td>
+<td>No</td>
+</tr>
+<tr>
+<td>taxID</td>
+<td>Stringa. Codice Fiscale.</td>
+<td><a href="https://schema.org/Person">Person - Schema.org
+Type</a></td>
+<td>No</td>
+</tr>
+<tr>
+<td>telephone</td>
+<td>Stringa. Numero di telefono.</td>
+<td><a href="https://schema.org/Person">Person - Schema.org
+Type</a></td>
+<td>No</td>
+</tr>
+<tr>
+<td>image</td>
+<td>Stringa. URL della foto.</td>
+<td><a href="https://schema.org/Thing">Thing - Schema.org Type</a></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+Esempio:
+
+"legalName": "Example Company",
+
+"legalAddress": "Via Salaria 691, Roma 00138",
+
+"location": "Roma",
+
+"logo": "<http://www.exampleCompany.it/logo>",
+
+"vatID": "IT12345678910",
+
+"telephone": "06 12 66 89 63 79",
+
+"identifier": ”1542134”,
+
+"validFrom": "2023-01-01",
+
+"validThrough": "2025-12-31",
+
+"employee": {
+
+"givenName": "Mike",
+
+"familyName": "Rossi",
+
+"birthDate": "1975-03-15",
+
+"address": "Via Ostiense 3691, Roma 00178",
+
+"email": "<mike.rossi@example.it>",
+
+"honorificPrefix": "Dott.",
+
+"jobTitle": "Digital Project Manager",
+
+"taxID": "XRBPOS75E05H501Z",
+
+"telephone": "9812 60 86 62 89",
+
+“image”: “https://exampleCompany.it/photos/1542134.jpg”
+
+}
+
+A [questo link](https://github.com/italia/eid-wallet-it-docs/issues/742)
+si può consultare la proposta di data schema per la creazione
+dell’Attestato Elettronico.
+
+## **Possibili ambiti di interesse (non esaustivi)**
+
+- **Sanità e Benessere** (esempio: attestato celiachia, tessere di
+  invalidità, ecc)
+
+<!-- -->
+
+- **Tesserini Regionali** (esempio: tesserino venatorio, tesserino
+  raccolta funghi, tesserino raccolta tartufi, ecc)
+
+- **Qualifiche e Abilitazioni Professionali** (esempio: attestati di
+  Istruzione e Formazione Professionale, attestati di Unità di
+  Competenza – Formazione Professionale Continua, attestati di
+  abilitazione per professioni regolamentate, ecc)
+
+- ...
+
+## **Domande frequenti – Chiarimenti tecnici**
+
+### **1. Identificativo univoco**
+
+L’unico identificatore ai fini del *lookup* nelle API di rilascio degli
+attributi è il **Codice Fiscale (CF)** del soggetto titolare.  
+È tuttavia possibile, **in via opzionale**, includere ulteriori
+identificatori, come ad esempio l’**ID ANPR**, purché l’interrogazione
+tramite Codice Fiscale sia sempre presente.
+
+
+### **2. Granularità delle informazioni**
+
+L’esposizione degli attributi necessari alla generazione di un singolo
+Attestato Elettronico di Attributo (EAA) **equivale ad una API**.  
+È ammissibile che una singola API contenga uno o più set di dati
+afferibili allo stesso codice fiscale, purché omogenei per categoria
+funzionale.
+
+**Esempio di API:**
+
+- [Titoli di studio
+  (ANIS)](https://www.interop.pagopa.it/catalogo/7520fcbd-9c22-4bce-a3d7-0677a4e25e58/)
+  
+
+### **3. API statistica (numero accessi IT-Wallet)**
+
+L’API statistica è considerata valida ai fini del raggiungimento del
+numero di API del pacchetto previsto dal bando.
+
+
+### 4. Sincronicità delle richieste
+
+Tutte le API previste devono operare in modalità **sincrona**,
+restituendo la risposta contestualmente alla richiesta.
+
+
+### **5. Servizio Signal Hub**
+
+L’implementazione del [servizio Signal
+Hub](https://developer.pagopa.it/pdnd-interoperabilita/guides/manuale-operativo-signal-hub),
+funzionale alla gestione del ciclo di vita degli Attestati, è opzionale
+e **non** considerata ai fini del raggiungimento del numero di API
+previste dall’avviso.
+
+
+### **6. Ammissibilità degli Attestati**
+
+Qualsiasi Attestato proposto deve riferirsi **esclusivamente a persone
+fisiche**.  
+Non sono ammesse informazioni associate unicamente a beni mobili,
+immobili o persone giuridiche, anche se indirettamente collegati al
+cittadino.
+
+**Esempi non ammissibili:**
+
+- *Tessera carburante*, in quanto riferita alla targa di un veicolo e
+  non alla persona;
+
+- *Attestato di proprietà immobiliare* (es. iscrizione al Catasto
+  Tavolare), in quanto collegato al bene e non al titolare.
+
+Qualsiasi Attestato proposto non può esporre dati che fanno già parte di
+un’anagrafe o sistema dati **nazionale**.
+
+**Esempi non ammissibili:**
+
+- Attestati riferiti ad animali domestici (Anagrafe degli animali
+  d'affezione)
+  
+
+### **7. Attributi di titolarità di altri Enti regionali**
+
+<span class="mark">Si rimanda al contenuto dell’Allegato 2
+dell’Avviso</span>
+
+
+### **8. Attributi in transizione di titolarità**
+
+Come previsto dal bando, l’erogazione degli attributi dovrà essere
+garantita per almeno **cinque anni** dalla data di pubblicazione
+dell’API.
+
+
+### **Indicazioni finali**
+
+Le presenti raccomandazioni hanno lo scopo di assicurare un **approccio
+uniforme, interoperabile e sostenibile** nella progettazione delle API
+esposte.  
+È pertanto raccomandato che ciascun Ente:
+
+- garantisca la **qualità** del dato esposto;
+
+- adotti **processi di validazione tecnica e funzionale** in linea con
+  le regole PDND e IT-Wallet;
+
+- promuova la **standardizzazione dei modelli dati** per favorirne il
+  riuso e l’omogeneità di utilizzo.
+
+### Come contribuire
+
+Il presente repository è inteso come strumento di condivisione ed aperto
+alla collaborazione tra tutti gli Enti coinvolti.
+
+Qui è possibile iniziare o partecipare a discussioni, fare segnalazioni
+o inviare dei contributi a beneficio delle Regioni / Province Autonome
+interessate all’Avviso.
+
+Si raccomanda di consultare il [Codice di
+condotta](https://github.com/italia/bootstrap-italia/blob/main/CODE_OF_CONDUCT.md)
+della community legata ai progetti dell'organizzazione Italia su GitHub,
+strumento utile a mantenere un ambiente di collaborazione inclusivo e
+propositivo.
