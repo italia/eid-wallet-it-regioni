@@ -269,45 +269,25 @@ Type</a></td>
 Esempio:
 ````
 "legalName": "Example Company",
-
 "legalAddress": "Via Salaria 691, Roma 00138",
-
 "location": "Roma",
-
 "logo": "<http://www.exampleCompany.it/logo>",
-
 "vatID": "IT12345678910",
-
 "telephone": "06 12 66 89 63 79",
-
 "identifier": ”1542134”,
-
 "validFrom": "2023-01-01",
-
 "validThrough": "2025-12-31",
-
 "employee": {
-
 "givenName": "Mike",
-
 "familyName": "Rossi",
-
 "birthDate": "1975-03-15",
-
 "address": "Via Ostiense 3691, Roma 00178",
-
 "email": "<mike.rossi@example.it>",
-
 "honorificPrefix": "Dott.",
-
 "jobTitle": "Digital Project Manager",
-
 "taxID": "XRBPOS75E05H501Z",
-
 "telephone": "9812 60 86 62 89",
-
 “image”: “https://exampleCompany.it/photos/1542134.jpg”
-
 }
 ````
 
