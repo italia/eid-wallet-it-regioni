@@ -5,21 +5,15 @@
 ## **Indice dei contenuti**
 
 - [Introduzione e contesto](#introduzione-e-contesto)
-
 - [Scopo e ambito di applicazione](#scopo-e-ambito-di-applicazione)
-
 - [Requisiti tecnici e di conformità](#requisiti-tecnici-e-di-conformità)
-
 - [API raccomandate e specifiche operative](#api-raccomandate-e-specifiche-operative)
-
 - [Possibili ambiti di interesse (non esaustivi)](#possibili-ambiti-di-interesse-non-esaustivi)
-
 - [Domande frequenti e chiarimenti tecnici](#domande-frequenti-e-chiarimenti-tecnici)
-
 - [Indicazioni finali](#indicazioni-finali)
-  
 - [Come contribuire](#come-contribuire)
-  
+
+
 
 ## Introduzione e contesto
 
@@ -146,10 +140,12 @@ e
 “[Autenticazione](https://italia.github.io/eid-wallet-it-docs/versione-corrente/it/functionalities.html#authentication)”.
 
 **Esempio endpoint API statistica:**  
+````
 GET /api/v1/it-wallet/auth-stats?year=2025&month=10
+````
 
 **Esempio risposta (200):**
-
+````
 {  
 "fromDate": "2024-06-01",  
 "toDate": "2025-10-31",  
@@ -161,7 +157,7 @@ GET /api/v1/it-wallet/auth-stats?year=2025&month=10
 1214}  
 \]  
 }
-
+````
 ### **B. API Badge Impiegato Regionale**
 
 **Obiettivo:** mettere a disposizione i dati necessari al Credential
@@ -271,7 +267,7 @@ Type</a></td>
 </table>
 
 Esempio:
-
+````
 "legalName": "Example Company",
 
 "legalAddress": "Via Salaria 691, Roma 00138",
@@ -313,6 +309,7 @@ Esempio:
 “image”: “https://exampleCompany.it/photos/1542134.jpg”
 
 }
+````
 
 A [questo link](https://github.com/italia/eid-wallet-it-docs/issues/742)
 si può consultare la proposta di data schema per la creazione
