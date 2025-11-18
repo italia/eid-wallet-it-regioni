@@ -4,24 +4,27 @@
 
 ## **Indice dei contenuti**
 
-- Introduzione e contesto
+- [Introduzione e contesto](#introduzione-e-contesto)
 
-- Scopo e ambito di applicazione
+- [Scopo e ambito di applicazione](#scopo-e-ambito-di-applicazione)
 
-- Requisiti tecnici e di conformità
+- [Requisiti tecnici e di conformità](#requisiti-tecnici-e-di-conformità)
 
-- API raccomandate – Specifiche operative
+- [API raccomandate e specifiche operative](#api-raccomandate-e-specifiche-operative)
 
-- Cluster di API di interesse (non esaustivi) – Modelli e requisiti
+- [Possibili ambiti di interesse (non esaustivi)](#possibili-ambiti-di-interesse-non-esaustivi)
 
-- Domande frequenti – Chiarimenti tecnici
+- [Domande frequenti e chiarimenti tecnici](#domande-frequenti-e-chiarimenti-tecnici)
 
-- Proposte di attributi e raccomandazioni di ammissibilità
+- [Indicazioni finali](#indicazioni-finali)
+  
+- [Come contribuire](#come-contribuire)
+  
 
-## **Introduzione e contesto**
+## Introduzione e contesto
 
 Il presente repository fornisce indicazioni e raccomandazioni tecniche
-relative alla partecipazione all’[Avviso pubblico PNRR 1.3.1 – PDND / IT
+relative alla partecipazione all’[Avviso pubblico PNRR 1.3.1 - PDND / IT
 Wallet](https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a01bU00000NTeWKQA1). 
 
 Le disposizioni qui riportate costituiscono un quadro interpretativo
@@ -73,14 +76,14 @@ le cui sezioni di maggiore interesse sono:
 
 ### **Requisiti tecnici**
 
-1.  **Identificativo univoco** – Il Codice Fiscale (CF) rappresenta
+1.  **Identificativo univoco** - Il Codice Fiscale (CF) rappresenta
     l’identificativo univoco da utilizzare per le chiamate alle API (ad
     eccezione dell’API statistica)
 
-2.  **Risposta sincrona** – Le API devono rispondere in modalità
+2.  **Risposta sincrona** - Le API devono rispondere in modalità
     sincrona
 
-3.  **Pubblicazione nel Catalogo PDND** – Ogni API dovrà esporre un set
+3.  **Pubblicazione nel Catalogo PDND** - Ogni API dovrà esporre un set
     di dati completo nel contenuto e negli attributi. È ammessa la
     pubblicazione di basi dati parziali relative a **periodi temporali
     limitati.**
@@ -114,7 +117,7 @@ quale erogatore dell’e-service su PDND:
   derivanti dal finanziamento con fondi PNRR in relazione alla Misura
   1.3.1.
 
-## **API raccomandate – Specifiche operative**
+## **API raccomandate e specifiche operative**
 
 ### **A. API Statistica Autenticazioni IT-Wallet**
 
@@ -327,12 +330,12 @@ dell’Attestato Elettronico.
 
 - **Qualifiche e Abilitazioni Professionali** (esempio: attestati di
   Istruzione e Formazione Professionale, attestati di Unità di
-  Competenza – Formazione Professionale Continua, attestati di
+  Competenza - Formazione Professionale Continua, attestati di
   abilitazione per professioni regolamentate, ecc)
 
 - ...
 
-## **Domande frequenti – Chiarimenti tecnici**
+## **Domande frequenti e chiarimenti tecnici**
 
 ### **1. Identificativo univoco**
 
@@ -416,7 +419,7 @@ garantita per almeno **cinque anni** dalla data di pubblicazione
 dell’API.
 
 
-### **Indicazioni finali**
+## **Indicazioni finali**
 
 Le presenti raccomandazioni hanno lo scopo di assicurare un **approccio
 uniforme, interoperabile e sostenibile** nella progettazione delle API
@@ -431,7 +434,7 @@ esposte.
 - promuova la **standardizzazione dei modelli dati** per favorirne il
   riuso e l’omogeneità di utilizzo.
 
-### Come contribuire
+## Come contribuire
 
 Il presente repository è inteso come strumento di condivisione ed aperto
 alla collaborazione tra tutti gli Enti coinvolti.
