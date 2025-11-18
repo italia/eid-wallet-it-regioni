@@ -84,7 +84,7 @@ le cui sezioni di maggiore interesse sono:
 
 ### Titolarità dei dati 
 
-Ai fini del presente Avviso, come definito nell'Allegato 2, la Regione/Provincia Autonoma può operare
+Ai fini del presente Avviso, come definito nell'[Allegato 2](https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/069bU000008dROjQAM?operationContext=S1), la Regione/Provincia Autonoma può operare
 quale erogatore dell’e-service su PDND:
 
 - **in qualità di Titolare di Fonte Autentica;**
@@ -385,8 +385,8 @@ un’anagrafe o sistema dati **nazionale**.
 
 ### **7. Attributi di titolarità di altri Enti regionali**
 
-<span class="mark">Si rimanda al contenuto dell’Allegato 2
-dell’Avviso</span>
+<span class="mark">Si rimanda al contenuto dell’[Allegato 2
+dell’Avviso](https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/069bU000008dROjQAM?operationContext=S1)</span>
 
 
 ### **8. Attributi in transizione di titolarità**
