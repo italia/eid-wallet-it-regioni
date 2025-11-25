@@ -313,87 +313,7 @@ dell’Attestato Elettronico.
 - ...
 
 ## **Domande frequenti e chiarimenti tecnici**
-
-### **1. Identificativo univoco**
-
-L’unico identificatore ai fini del *lookup* nelle API di rilascio degli
-attributi è il **Codice Fiscale (CF)** del soggetto titolare.  
-È tuttavia possibile, **in via opzionale**, includere ulteriori
-identificatori, come ad esempio l’**ID ANPR**, purché l’interrogazione
-tramite Codice Fiscale sia sempre presente.
-
-
-### **2. Granularità delle informazioni**
-
-L’esposizione degli attributi necessari alla generazione di un singolo
-Attestato Elettronico di Attributo (EAA) **equivale ad una API**.  
-È ammissibile che una singola API contenga uno o più set di dati
-afferibili allo stesso codice fiscale, purché omogenei per categoria
-funzionale.
-
-**Esempio di API:**
-
-- [Titoli di studio
-  (ANIS)](https://www.interop.pagopa.it/catalogo/7520fcbd-9c22-4bce-a3d7-0677a4e25e58/)
-  
-
-### **3. API statistica (numero accessi IT-Wallet)**
-
-L’API statistica è considerata valida ai fini del raggiungimento del
-numero di API del pacchetto previsto dal bando.
-
-
-### 4. Sincronicità delle richieste
-
-Tutte le API previste devono operare in modalità **sincrona**,
-restituendo la risposta contestualmente alla richiesta.
-
-
-### **5. Servizio Signal Hub**
-
-L’implementazione del [servizio Signal
-Hub](https://developer.pagopa.it/pdnd-interoperabilita/guides/manuale-operativo-signal-hub),
-funzionale alla gestione del ciclo di vita degli Attestati, è opzionale
-e **non** considerata ai fini del raggiungimento del numero di API
-previste dall’avviso.
-
-
-### **6. Ammissibilità degli Attestati**
-
-Qualsiasi Attestato proposto deve riferirsi **esclusivamente a persone
-fisiche**.  
-Non sono ammesse informazioni associate unicamente a beni mobili,
-immobili o persone giuridiche, anche se indirettamente collegati al
-cittadino.
-
-**Esempi non ammissibili:**
-
-- *Tessera carburante*, in quanto riferita alla targa di un veicolo e
-  non alla persona;
-
-- *Attestato di proprietà immobiliare* (es. iscrizione al Catasto
-  Tavolare), in quanto collegato al bene e non al titolare.
-
-Qualsiasi Attestato proposto non può esporre dati che fanno già parte di
-un’anagrafe o sistema dati **nazionale**.
-
-**Esempi non ammissibili:**
-
-- Attestati riferiti ad animali domestici (Anagrafe degli animali
-  d'affezione)
-  
-
-### **7. Attributi di titolarità di altri Enti regionali**
-
-<span class="mark">Si rimanda al contenuto dell’[Allegato 2
-dell’Avviso](https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/069bU000008dROjQAM?operationContext=S1)</span>
-
-
-### **8. Attributi in transizione di titolarità**
-
-Come previsto dal bando, l’erogazione degli attributi dovrà essere
-garantita per almeno **cinque anni** dalla data di pubblicazione
-dell’API.
+Tutte le domande sono gestite nella sezione [*Discussions*](https://github.com/italia/eid-wallet-it-regioni/discussions)
 
 
 ## **Indicazioni finali**
@@ -425,3 +345,24 @@ condotta](https://github.com/italia/bootstrap-italia/blob/main/CODE_OF_CONDUCT.m
 della community legata ai progetti dell'organizzazione Italia su GitHub,
 strumento utile a mantenere un ambiente di collaborazione inclusivo e
 propositivo.
+
+Sono particolarmente benvenuti contributi relativi a:
+
+- nuove API idonee alla generazione di Attestati Elettronici;
+- nuovi cluster tematici;
+- miglioramenti alle API esistenti;
+- miglioramenti agli schema dati (aggiunta di nuovi attributi, revisione dei modelli esistenti, definizione di nuovi dataset, ecc);
+- documentazione tecnica (ad esempio i casi d’uso);
+- standardizzazione (convenzioni su naming, struttura API, semantica dei campi, ecc).
+
+Quando aprire una **Issue**:
+- per chiedere chiarimenti tecnici;
+- segnalare errori o mancanze.
+
+La sezione **Discussions** è il canale privilegiato per:
+- confronto aperto tra Enti;
+- proposte preliminari di API;
+- valutazioni preliminari su possibili attributi;
+- quesiti informali o generali;
+- evidenziare casistiche particolari o casi limite.
+
