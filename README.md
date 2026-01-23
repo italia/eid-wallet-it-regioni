@@ -268,26 +268,39 @@ Type</a></td>
 
 Esempio:
 ````
-"legalName": "Example Company",
-"legalAddress": "Via Salaria 691, Roma 00138",
-"location": "Roma",
-"logo": "<http://www.exampleCompany.it/logo>",
-"vatID": "IT12345678910",
-"telephone": "06 12 66 89 63 79",
-"identifier": ”1542134”,
-"validFrom": "2023-01-01",
-"validThrough": "2025-12-31",
-"employee": {
-"givenName": "Mike",
-"familyName": "Rossi",
-"birthDate": "1975-03-15",
-"address": "Via Ostiense 3691, Roma 00178",
-"email": "<mike.rossi@example.it>",
-"honorificPrefix": "Dott.",
-"jobTitle": "Digital Project Manager",
-"taxID": "XRBPOS75E05H501Z",
-"telephone": "9812 60 86 62 89",
-“image”: “https://exampleCompany.it/photos/1542134.jpg”
+{
+  "iss": "https://authentic-source.example.it",
+  "nbf": 1736846688,
+  "exp": 1736846928,
+  "iat": 1736846688,
+  "aud": "82914b3f-60b2-4529-b4d6-3d4e67f0a933",
+  "jti": "c8bd8a2f-e990-44fa-9013-1b353bfc5a0d",
+  "userClaims": {
+    "given_name": "Mario",
+    "family_name": "Rossi",
+    "birth_date": "1980-01-10",
+    "birth_place": "Roma",
+    "tax_id_code": "TINIT-RSSMRO75E05H501Z"
+  },
+  "attributeClaims": [
+    {
+      "object_id": "GUID-1234-5678",
+      "status": "VALID",
+      "last_updated": "2024-12-31T23:59:59Z",
+      "legal_name": "Regione Lombardia",
+      "vat_id": "01234567890",
+      "employee_role": "Digital Project Manager",
+      "employee_office": "Direzione Sistemi Informativi",
+      "badge_code": "BADGE-001"
+    }
+  ],
+  "metadataClaims": [
+    {
+      "object_id": "GUID-1234-5678",
+      "issuance_date": "2024-01-01",
+      "expiry_date": "2025-12-31"
+    }
+  ]
 }
 ````
 
