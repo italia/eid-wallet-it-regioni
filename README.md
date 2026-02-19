@@ -259,8 +259,8 @@ Type</a></td>
 </tr>
 <tr>
 <td>image</td>
-<td>Stringa. URL della foto.</td>
-<td><a href="https://schema.org/Thing">Thing - Schema.org Type</a></td>
+<td>Stringa  </td>
+<td>Immagine codificata in Base64</td>
 <td>No</td>
 </tr>
 </tbody>
