@@ -287,11 +287,12 @@ Esempio:
       "object_id": "GUID-1234-5678",
       "status": "VALID",
       "last_updated": "2024-12-31T23:59:59Z",
-      "legal_name": "Regione Lombardia",
-      "vat_id": "01234567890",
+      "organization_name": "Regione Lombardia",
+      "organization_vat_id": "01234567890",
       "employee_role": "Digital Project Manager",
       "employee_office": "Direzione Sistemi Informativi",
-      "badge_code": "BADGE-001"
+      "employee_id": "MATR-98765",
+      "employee_badge_id": "BADGE-001"
     }
   ],
   "metadataClaims": [
