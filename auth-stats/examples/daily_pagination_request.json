@@ -1,0 +1,9 @@
+{
+  "period": {
+    "from": "2025-03-01",
+    "to": "2025-03-31"
+  },
+  "granularity": "daily",
+  "limit": 5,
+  "offset": 10
+}

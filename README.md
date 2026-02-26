@@ -119,45 +119,70 @@ quale erogatore dell’e-service su PDND:
 autenticazioni avvenute sulle piattaforme delle Regioni e delle Province
 Autonome tramite IT-Wallet.
 
-**Requisiti:** Il contatore incrementale registra:
+Il servizio espone metriche aggregate relative ai flussi di
+autenticazione, supportando filtri temporali e per ente (IPA).
 
-- Numero di richieste di autenticazione completate con successo
-  (obbligatorio)
+Per i dettagli tecnici completi, la specifica OpenAPI e gli esempi di
+integrazione, si rimanda alla documentazione dedicata:  
+👉 [**Documentazione API Statistica (auth-stats)**](./auth-stats/)
 
-- Numero di richieste di autenticazione rigettate (non valide: errori di
-  firma, non riconoscibilità dell’issuer, errori di data format, errori
-  nei parametri delle richieste e delle risposte, ecc). (opzionale)
+> [!NOTE]  
+> È possibile implementare l'e-service a partire dal template su PDND chiamato **Consultazione Statistiche "Entra con IT-Wallet"**.
 
-- Numero totale di richieste di autenticazione pervenute (opzionale)
+**Endpoint principali:**
+- `POST /auth-stats/summary`: Report aggregato globale per il periodo richiesto.
+- `POST /auth-stats/breakdown`: Elenco dettagliato e paginato delle metriche (es. per giorno o per IPA).
+- `GET /public-administrations`: Elenco IPA delle amministrazioni gestite (necessario per filtri granulari).
 
-I numeri delle richieste potranno essere totali dalla data di rilascio
-e\o parziali per anno e mese.
+**Esempio richiesta Breakdown (Daily con Paginazione):**
+````json
+{
+  "period": {
+    "from": "2025-03-01",
+    "to": "2025-03-31"
+  },
+  "granularity": "daily",
+  "limit": 5,
+  "offset": 10
+}
+````
+
+**Esempio risposta Breakdown (200):**
+````json
+{
+  "period": { "from": "2025-03-01", "to": "2025-03-31" },
+  "pagination": { "limit": 5, "offset": 10, "totalItems": 31 },
+  "breakdown": [
+    {
+      "label": "2025-03-11",
+      "granularity": "daily",
+      "stats": { 
+        "total": 140, 
+        "success": 135,
+        "failure": { "total": 5, "technical": 1, "business": 4 }
+      }
+    },
+    {
+      "label": "2025-03-12",
+      "granularity": "daily",
+      "stats": { 
+        "total": 135, 
+        "success": 130,
+        "failure": { "total": 5, "technical": 2, "business": 3 }
+      }
+    },
+    { "label": "2025-03-13", "granularity": "daily", "stats": { "total": 150, "success": 145 } },
+    { "label": "2025-03-14", "granularity": "daily", "stats": { "total": 155, "success": 150 } },
+    { "label": "2025-03-15", "granularity": "daily", "stats": { "total": 130, "success": 125 } }
+  ]
+}
+````
 
 Per maggiori dettagli sull’implementazione dell’autenticazione, si
 rimanda alle sezioni delle Specifiche Tecniche ["Flusso
 remoto"](https://italia.github.io/eid-wallet-it-docs/versione-corrente/it/remote-flow.html)
 e
 “[Autenticazione](https://italia.github.io/eid-wallet-it-docs/versione-corrente/it/functionalities.html#authentication)”.
-
-**Esempio endpoint API statistica:**  
-````
-GET /api/v1/it-wallet/auth-stats?year=2025&month=10
-````
-
-**Esempio risposta (200):**
-````
-{  
-"fromDate": "2024-06-01",  
-"toDate": "2025-10-31",  
-"totalRequests": 12345,  
-"failedRequests": 234,  
-"successfulRequests": 12011,  
-"byMonth": \[  
-{"year": 2025, "month": 10, "total": 1234, "failed": 20, "success":
-1214}  
-\]  
-}
-````
 ### **B. API Badge Impiegato Regionale**
 
 **Obiettivo:** mettere a disposizione i dati necessari al Credential

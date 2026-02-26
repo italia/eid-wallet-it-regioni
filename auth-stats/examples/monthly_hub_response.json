@@ -1,0 +1,46 @@
+{
+  "period": {
+    "from": "2025-01-01",
+    "to": "2025-03-31"
+  },
+  "pagination": {
+    "limit": 3,
+    "offset": 0,
+    "totalItems": 3
+  },
+  "breakdown": [
+    {
+      "label": "2025-01",
+      "granularity": "monthly",
+      "stats": {
+        "total": 45000,
+        "success": 44200,
+        "failure": {
+          "total": 800
+        }
+      }
+    },
+    {
+      "label": "2025-02",
+      "granularity": "monthly",
+      "stats": {
+        "total": 42000,
+        "success": 41500,
+        "failure": {
+          "total": 500
+        }
+      }
+    },
+    {
+      "label": "2025-03",
+      "granularity": "monthly",
+      "stats": {
+        "total": 48000,
+        "success": 47300,
+        "failure": {
+          "total": 700
+        }
+      }
+    }
+  ]
+}

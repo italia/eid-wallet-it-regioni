@@ -1,0 +1,35 @@
+{
+  "period": {
+    "from": "2023-06-15",
+    "to": "2024-09-20"
+  },
+  "pagination": {
+    "limit": 10,
+    "offset": 0,
+    "totalItems": 2
+  },
+  "breakdown": [
+    {
+      "label": "2023",
+      "granularity": "yearly",
+      "stats": {
+        "total": 250000,
+        "success": 245000,
+        "failure": {
+          "total": 5000
+        }
+      }
+    },
+    {
+      "label": "2024",
+      "granularity": "yearly",
+      "stats": {
+        "total": 300000,
+        "success": 298000,
+        "failure": {
+          "total": 2000
+        }
+      }
+    }
+  ]
+}
