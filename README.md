@@ -126,6 +126,9 @@ Per i dettagli tecnici completi, la specifica OpenAPI e gli esempi di
 integrazione, si rimanda alla documentazione dedicata:  
 👉 [**Documentazione API Statistica (auth-stats)**](./auth-stats/)
 
+> [!NOTE]  
+> È possibile implementare l'e-service a partire dal template su PDND chiamato **Consultazione Statistiche "Entra con IT-Wallet"**.
+
 **Endpoint principali:**
 - `POST /auth-stats/summary`: Report aggregato globale per il periodo richiesto.
 - `POST /auth-stats/breakdown`: Elenco dettagliato e paginato delle metriche (es. per giorno o per IPA).
