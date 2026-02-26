@@ -1,0 +1,37 @@
+{
+  "period": {
+    "from": "2025-03-01",
+    "to": "2025-03-02"
+  },
+  "pagination": {
+    "limit": 10,
+    "offset": 0,
+    "totalItems": 2
+  },
+  "breakdown": [
+    {
+      "label": "2025-03-01",
+      "granularity": "daily",
+      "stats": {
+        "total": 150,
+        "success": 142,
+        "failure": {
+          "total": 8,
+          "technical": 1,
+          "business": 7
+        }
+      }
+    },
+    {
+      "label": "2025-03-02",
+      "granularity": "daily",
+      "stats": {
+        "total": 120,
+        "success": 118,
+        "failure": {
+          "total": 2
+        }
+      }
+    }
+  ]
+}
