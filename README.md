@@ -55,7 +55,7 @@ collaborazione tra tutti gli Enti coinvolti.**
 
 Le API dovranno seguire le informazioni presenti nel [Manuale Operativo
 di
-PDND](https://developer.pagopa.it/pdnd-interoperabilita/guides/pdnd-manuale-operativo)
+PDND](https://developer.pagopa.it/pdnd-interoperabilita/guides/manuale-operativo-pdnd-interoperabilita)
 (con particolare riferimento alla sezione “e-service”) ed essere
 conformi alle **Specifiche Tecniche del Sistema IT-Wallet**, disponibili
 presso il [repository
@@ -81,6 +81,18 @@ le cui sezioni di maggiore interesse sono:
     di dati completo nel contenuto e negli attributi. È ammessa la
     pubblicazione di basi dati parziali relative a **periodi temporali
     limitati.**
+
+### **Convenzioni di Naming e Descrizione**
+
+Al fine di garantire la massima reperibilità e uniformità all'interno del Catalogo PDND, è opportuno che la nomenclatura degli e-service rispetti le linee guida nazionali. In particolare, si raccomanda di seguire:
+
+* Le [**Buone pratiche per il nome dell’e-service**](https://italia.github.io/pdnd-guida-nomenclatura-eservice/docs/buone-pratiche-per-il-nome.html);
+* Le [**Buone pratiche per la descrizione dell’e-service**](https://italia.github.io/pdnd-guida-nomenclatura-eservice/docs/buone-pratiche-per-la-descrizione.html).
+
+**Esempio di applicazione:**
+
+* **Nome e-service:** `Consultazione badge dipendente - IT-Wallet`
+* **Descrizione e-service:** `Dato un codice fiscale, restituisce i dati del dipendente per la generazione dell'Attestato Elettronico IT-Wallet.`    
 
 ### Titolarità dei dati 
 
@@ -292,7 +304,7 @@ Type</a></td>
 </table>
 
 Esempio:
-````
+````json
 {
   "iss": "https://authentic-source.example.it",
   "nbf": 1736846688,
