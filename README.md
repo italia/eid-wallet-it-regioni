@@ -131,6 +131,8 @@ integrazione, si rimanda alla documentazione dedicata:
 
 > [!NOTE]  
 > È possibile implementare l'e-service a partire dal template su PDND chiamato **Consultazione Statistiche "Entra con IT-Wallet"**.
+> Clicca sul LINK di seguito per avviare il download del video:
+> [Demo utilizzo template PDND](https://raw.githubusercontent.com/italia/eid-wallet-it-regioni/main/Utilizzo%20template%20PDND.mp4)
 
 **Endpoint principali:**
 - `POST /auth-stats/summary`: Report aggregato globale per il periodo richiesto.
