@@ -68,6 +68,9 @@ le cui sezioni di maggiore interesse sono:
 - [**20.2. e-service
   PDND**](https://italia.github.io/eid-wallet-it-docs/versione-corrente/it/e-service-pdnd.html)
 
+Si comunica che è disponibile la nuova versione del Manuale operativo Titolare di Fonte Autentica IT-Wallet disponibile al seguente link:
+[**Manuale operativo Titolare di Fonte Autentica IT-Wallet**](https://github.com/italia/eid-wallet-it-docs/blob/versione-corrente/handbooks/it/authentic-sources/manuale-titolare-fonte-autentica.md)
+
 ### **Requisiti tecnici**
 
 1.  **Identificativo univoco** - Il Codice Fiscale (CF) rappresenta
